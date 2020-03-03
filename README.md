@@ -3,7 +3,7 @@
 Minimal tree to build TWRP in android-9.0
 
 ## Compile
-exportALLOW_MISSING_DEPENDENCIES=true
+export ALLOW_MISSING_DEPENDENCIES=true
 
 . build/envsetup.sh
 
