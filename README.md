@@ -5,6 +5,8 @@ Minimal tree to build TWRP in android-9.0
 ## Compile
 export ALLOW_MISSING_DEPENDENCIES=true
 
+export LC_ALL="C"
+
 . build/envsetup.sh
 
 lunch omni_honami-eng
