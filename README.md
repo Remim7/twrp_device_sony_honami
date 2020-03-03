@@ -1,14 +1,25 @@
-# TWRP for Sony Xperia Z1 Compact
+# TWRP for Sony Xperia Z1
 
 Minimal tree to build TWRP in android-9.0
 
 ## Compile
+exportALLOW_MISSING_DEPENDENCIES=true
 
-export ALLOW_MISSING_DEPENDENCIES=true
+. build/envsetup.sh
 
-. build/envsetup.sh && lunch omni_honami-eng
+lunch omni_honami-eng
 
-mka adbd recoveryimage
+make -j4 recoveryimage
+
+## Compile
+
+Since the FOTAKERNEL partition of Xperia Z1 is only 16MB, and the compiled TWRP is too large, it can only be used in the boot partition.
+
+Command to flash the boot partition
+
+fastboot flash boot recovery.img 
+
+fastboot reboot
 
 ## Device specifications
 
